@@ -1,5 +1,3 @@
-# Dscribe Clinical Discharge Agent
-
 <div align="center">
 
 # Clinical Discharge Summary Generation with Agentic AI
