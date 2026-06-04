@@ -12,66 +12,55 @@ from agents.discharge_agent import (
 
 PATIENT_FOLDER = "patient_data"
 
-pages = load_patient_folder(
-    PATIENT_FOLDER
-)
 
-print(
-    f"Loaded {len(pages)} pages"
-)
+def main():
 
-state = initialize_state(
-    patient_id="patient_1",
-    pages=pages
-)
+    pages = load_patient_folder(
+        PATIENT_FOLDER
+    )
 
-final_state = run_agent(
-    state
-)
+    print(
+        f"Loaded {len(pages)} pages"
+    )
 
-print(
-    "\n========== EXTRACTED DATA ==========\n"
-)
+    state = initialize_state(
+        patient_id="patient_1",
+        pages=pages
+    )
 
-if isinstance(
-        final_state["extracted_data"],
-        dict
-):
+    final_state = run_agent(
+        state
+    )
 
-    for key, value in final_state[
+    summary = final_state[
         "extracted_data"
-    ].items():
+    ]
+
+    print(
+        "\n\n========== FINAL OUTPUT ==========\n"
+    )
+
+    for section, value in summary.items():
 
         print(
-            f"\n{key.upper()}"
+            f"\n{section.upper()}"
         )
 
-        print("-" * 50)
+        print("=" * 80)
 
         print(value)
 
-else:
-
     print(
-        final_state["extracted_data"]
+        "\n\n========== TRACE ==========\n"
     )
 
-print(
-    "\n========== REVIEW FLAGS ==========\n"
-)
+    for step in final_state[
+        "trace_log"
+    ]:
 
-for flag in final_state[
-    "review_flags"
-]:
+        print(step)
 
-    print(flag)
 
-print(
-    "\n========== TRACE ==========\n"
-)
+if __name__ == "__main__":
 
-for step in final_state[
-    "trace_log"
-]:
-
-    print(step)
+    main()

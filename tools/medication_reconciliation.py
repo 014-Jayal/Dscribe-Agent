@@ -1,16 +1,25 @@
+# tools/medication_reconciliation.py
+
 def reconcile_medications(
-        admission_meds,
-        discharge_meds
+
+        admission_medications,
+
+        discharge_medications
+
 ):
 
     admission_set = set(
-        med.lower()
-        for med in admission_meds
+
+        str(med).lower()
+
+        for med in admission_medications
     )
 
     discharge_set = set(
-        med.lower()
-        for med in discharge_meds
+
+        str(med).lower()
+
+        for med in discharge_medications
     )
 
     added = list(
@@ -25,7 +34,12 @@ def reconcile_medications(
 
     return {
 
-        "added": added,
+        "added":
+            added,
 
-        "removed": removed
+        "removed":
+            removed,
+
+        "modified":
+            []
     }

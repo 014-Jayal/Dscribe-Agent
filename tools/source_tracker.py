@@ -1,22 +1,58 @@
-def find_source_pages(
+# tools/source_tracker.py
+
+def find_sources(
         pages,
-        extracted_text
+        extracted_data
 ):
 
-    matches = []
+    sources = {}
 
-    search_text = extracted_text[:50].lower()
+    for field, value in extracted_data.items():
 
-    for page in pages:
+        if value in [
+            None,
+            "",
+            [],
+            "NOT_FOUND"
+        ]:
+            continue
 
-        if search_text in page.text.lower():
+        sources[field] = []
 
-            matches.append({
-                "document":
-                    page.document_name,
+        if isinstance(value, list):
 
-                "page":
-                    page.page_number
-            })
+            search_terms = [
+                str(item).lower()[:20]
+                for item in value
+            ]
 
-    return matches[:3]
+        else:
+
+            search_terms = [
+                str(value).lower()[:20]
+            ]
+
+        for page in pages:
+
+            page_text = page.text.lower()
+
+            for term in search_terms:
+
+                if term and term in page_text:
+
+                    sources[field].append({
+
+                        "document":
+                            page.document_name,
+
+                        "page":
+                            page.page_number
+                    })
+
+                    break
+
+        sources[field] = (
+            sources[field][:3]
+        )
+
+    return sources

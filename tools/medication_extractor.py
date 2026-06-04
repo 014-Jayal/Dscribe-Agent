@@ -1,19 +1,42 @@
-import json
+# tools/medication_extractor.py
+
+import re
 
 
-def extract_medication_list(extracted_json):
+def extract_admission_medications(pages):
 
-    try:
+    medications = []
 
-        data = json.loads(
-            extracted_json
-        )
+    patterns = [
 
-        return data.get(
-            "medications",
-            []
-        )
+        r"thyroid.*treatment",
 
-    except:
+        r"thyroxine",
 
-        return []
+        r"levothyroxine",
+
+        r"metformin",
+
+        r"amlodipine",
+
+        r"telmisartan"
+    ]
+
+    for page in pages:
+
+        text = page.text.lower()
+
+        for pattern in patterns:
+
+            matches = re.findall(
+                pattern,
+                text
+            )
+
+            medications.extend(
+                matches
+            )
+
+    return list(
+        set(medications)
+    )

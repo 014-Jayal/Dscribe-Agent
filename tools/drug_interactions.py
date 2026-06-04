@@ -1,9 +1,9 @@
-def check_interactions(
-        medications
-):
+# tools/drug_interactions.py
+
+def check_interactions(medications):
 
     meds = [
-        med.lower()
+        str(med).lower()
         for med in medications
     ]
 
@@ -16,7 +16,7 @@ def check_interactions(
     ):
 
         alerts.append(
-            "Severe interaction: Warfarin + Aspirin"
+            "High Risk Interaction: Warfarin + Aspirin"
         )
 
     return alerts
