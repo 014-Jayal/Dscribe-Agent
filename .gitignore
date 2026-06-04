@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+.env
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Traces
+traces/*.json
+
+# Outputs
+outputs/*
+!outputs/.gitkeep
+
+# Memory Files
+memory/*
+!memory/.gitkeep
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Pytest
+.pytest_cache/
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Large PDF Data
+patient_data/
+
+# SQLite
+*.db
+*.sqlite3
