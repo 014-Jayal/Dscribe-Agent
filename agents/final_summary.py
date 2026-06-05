@@ -1,5 +1,3 @@
-# agents/final_summary.py
-
 from tools.confidence import (
     calculate_confidence
 )
