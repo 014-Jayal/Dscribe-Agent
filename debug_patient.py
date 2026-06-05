@@ -1,5 +1,3 @@
-# debug_patient.py
-
 from tools.patient_loader import load_patient_folder
 
 pages = load_patient_folder("patient_data")
