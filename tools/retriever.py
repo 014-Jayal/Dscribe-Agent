@@ -1,5 +1,3 @@
-# tools/retriever.py
-
 SECTION_KEYWORDS = {
 
     "demographics": [
