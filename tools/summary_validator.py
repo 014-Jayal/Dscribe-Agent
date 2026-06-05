@@ -1,5 +1,3 @@
-# tools/summary_validator.py
-
 REQUIRED_FIELDS = [
 
     "principal_diagnosis",
