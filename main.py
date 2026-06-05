@@ -1,5 +1,3 @@
-# main.py
-
 from tools.patient_loader import (
     load_patient_folder
 )
