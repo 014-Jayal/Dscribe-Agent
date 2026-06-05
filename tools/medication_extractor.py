@@ -1,5 +1,3 @@
-# tools/medication_extractor.py
-
 import re
 
 
