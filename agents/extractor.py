@@ -1,5 +1,3 @@
-# agents/extractor.py
-
 from tools.clinical_search import clinical_search
 from learning.memory import load_rules
 
