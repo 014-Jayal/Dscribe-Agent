@@ -1,5 +1,3 @@
-# test_text.py
-
 import fitz
 
 doc = fitz.open("patient_data/patient 2 (1).pdf")
