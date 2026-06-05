@@ -1,5 +1,3 @@
-# tools/escalation.py
-
 def generate_escalations(
         extracted_data
 ):
