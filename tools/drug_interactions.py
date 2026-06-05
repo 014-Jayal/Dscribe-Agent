@@ -1,5 +1,3 @@
-# tools/drug_interactions.py
-
 def check_interactions(medications):
 
     meds = [
