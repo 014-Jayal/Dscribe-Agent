@@ -1,5 +1,3 @@
-# tools/source_tracker.py
-
 def find_sources(
         pages,
         extracted_data
