@@ -1,5 +1,3 @@
-# tools/safety_report.py
-
 def build_safety_report(
         review_flags
 ):
