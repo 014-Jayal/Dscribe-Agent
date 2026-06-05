@@ -1,5 +1,3 @@
-# tools/conflict_detector.py
-
 import json
 import re
 from config.gemini import llm
