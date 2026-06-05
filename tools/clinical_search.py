@@ -1,5 +1,3 @@
-# tools/clinical_search.py
-
 from config.gemini import llm
 
 
