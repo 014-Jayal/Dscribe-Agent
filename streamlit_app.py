@@ -1,5 +1,3 @@
-# streamlit_app.py
-
 import streamlit as st
 import json
 from tools.patient_loader import load_patient_folder
