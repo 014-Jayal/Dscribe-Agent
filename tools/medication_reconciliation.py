@@ -1,5 +1,3 @@
-# tools/medication_reconciliation.py
-
 def reconcile_medications(
 
         admission_medications,
