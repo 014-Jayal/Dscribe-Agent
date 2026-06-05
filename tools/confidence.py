@@ -1,5 +1,3 @@
-# tools/confidence.py
-
 def calculate_confidence(
         value,
         sources_count=0
