@@ -1,5 +1,3 @@
-# agents/discharge_agent.py
-
 import json
 
 from agents.discharge_formatter import format_discharge_summary
