@@ -1,5 +1,3 @@
-# agents/discharge_formatter.py
-
 def format_discharge_summary(
         extracted_data,
         review_flags
