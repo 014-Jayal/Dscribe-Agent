@@ -1,5 +1,3 @@
-# tools/patient_loader.py
-
 from pathlib import Path
 
 from tools.pdf_reader import extract_pdf_text
