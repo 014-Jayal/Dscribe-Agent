@@ -1,5 +1,3 @@
-# tools/metrics.py
-
 def calculate_evidence_coverage(
         extracted_data
 ):
