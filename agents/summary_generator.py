@@ -1,5 +1,3 @@
-# agents/summary_generator.py
-
 import json
 
 
